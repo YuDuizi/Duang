@@ -45,6 +45,14 @@
                                                                             const DAMP = 0.82;       // 减少多余晃动
                                                                         // 阻尼（越小弹簧震荡越久，0.7左右为果冻感，0.9左右为干脆感）
 
+                                                                        // 3. 在 checkBeat() 函数内（触发时的推力）
+                                                                        velY = -0.35; // 【保持】强力下压，制造重低音的压迫感
+
+                                                                        // 4. 在自动Duang按钮内（如果你只用自动模式）
+                                                                        autoTimer = setInterval(() => {
+                                                                          velY = -0.35; 
+                                                                          }, 900); // 900毫秒跳一次
+
                                                                             let autoDuang = false, autoTimer = null;
 
                                                                             // 音频相关
