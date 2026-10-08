@@ -14,7 +14,7 @@
                                     /* 时长输入框样式 */
                                         input[type=number]{width: 50px; padding: 8px; border-radius: 10px; border: 1px solid #444; background: #222; color: #fff; text-align: center; font-size: 14px;}
                                             canvas{flex:1;width:100%;display:block;touch-action:none;}
-                                              </style>
+                                             </style>
                                               </head>
                                               <body>
                                               <div id="app">
@@ -27,7 +27,21 @@
                                                                         <input id="durationInput" type="number" value="5" min="5" max="15">
                                                                             <button id="exportBtn">导出动图</button>
                                                                               </div>
-                                                                                <canvas id="canvas"></canvas>
+                                                                              <!-- GIF 装饰层 -->
+                                                                              <div id="gif-layer">
+                                                                                <!-- 这里放你的 GIF，src 写文件名，用 style 控制位置和大小 -->
+                                                                                  <img class="deco-gif" src="./1.gif" style="top: 10%; left: 50%; height: 210px;">
+                                                                                    <img class="deco-gif" src="./2.gif" style="top: 25%; left: 15%; height: 210px;">
+                                                                                      <img class="deco-gif" src="./3.gif" style="top: 35%; right: 15%; height: 200px;">
+                                                                                      <img class="deco-gif" src="./4.gif" style="top: 5%; right: 5%; width: 200px;">
+                                                                                      
+</div>
+
+<canvas id="canvas"></canvas>
+                                                                                      </div>
+                                                                                      
+                                                                                      <canvas id="canvas"></canvas>
+                                                                      
                                                                                   
                                                                                     <!-- 你的本地 BGM -->
                                                                                       <audio id="bgm" loop crossorigin="anonymous">
